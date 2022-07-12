@@ -14,6 +14,6 @@ print(age)
 print(type(Greeting))
 print(type(age))
 
-age = "Wow"
+age = "Wows"
 print(age)
 print(type(age))
