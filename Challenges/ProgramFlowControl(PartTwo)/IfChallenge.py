@@ -10,4 +10,4 @@ age = int(input("Please enter your age: "))
 if 18 <= age < 31:
     print("Have a great holiday {}!".format(name))
 else:
-    print("Our apologies you're not in our selected age range to allow entry.")
+    print("Our apologies you're not in our age range to allow entry.")
