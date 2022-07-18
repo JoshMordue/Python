@@ -9,3 +9,13 @@ shopping_list += ["cookies"]
 
 print(shopping_list)
 print(id(shopping_list))
+
+print(another_list)
+
+a = b = c = d = e = f = another_list
+
+print(a)
+print("Adding Cream")
+b.append("Cream")
+print(c)
+print(d)
