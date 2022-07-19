@@ -2,17 +2,14 @@ even = [2, 4, 6, 8]
 
 odd = [1, 3, 5, 7, 9]
 
-print(max(even))
-print(min(even))
+even.extend(odd)
+print(even)
 
-print(max(odd))
-print(min(odd))
+another_even = even
+print(another_even)
 
-print()
+even.sort(reverse=True)
 
-print(len(even))
-print(len(odd))
+print(even)
+print(another_even)
 
-print()
-
-print("Mississippi".count("s"))
