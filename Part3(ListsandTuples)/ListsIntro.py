@@ -5,11 +5,12 @@ computer_parts = ["computer",
                   "mouse mat"
                   ]
 
-for part in computer_parts:
-    print(part)
+print(computer_parts)
 
-print()
-print(computer_parts[2])
+#computer_parts[3]= "Trackball"
 
-print(computer_parts[0:3])
-print(computer_parts[-1])
+
+print(computer_parts[3:])
+
+computer_parts[3:] = ["trackball"]
+print(computer_parts)
