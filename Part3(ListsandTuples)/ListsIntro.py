@@ -1,4 +1,5 @@
-computer_parts = ["computer",
+computer_parts = [
+                  "computer",
                   "monitor",
                   "keyboard",
                   "mouse",
