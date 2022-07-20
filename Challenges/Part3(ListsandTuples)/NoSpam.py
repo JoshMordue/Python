@@ -14,11 +14,14 @@ menu = [
 # Remove spam from each list then print the list.
 # Print out the items in each list as long as it's not spam.
 
-# for meal in menu:
-#     for index in range(len(meal) - 1, -1, -1):
-#         if meal[index] == "spam":
-#             del meal[index]
-#     print(meal)
+for meal in menu:
+    for index in range(len(meal) - 1, -1, -1):
+        if meal[index] == "spam":
+            del meal[index]
+    print(", ".join(meal))
+
+
+
 
 # for meal in menu:
 #     for index in range(len(meal) - 1, -1, -1):
@@ -27,8 +30,8 @@ menu = [
 #         else:
 #             print(meal)
 
-for meal in menu:
-    for item in meal:
-        if item != "spam":
-            print(item)
-    print()
+# for meal in menu:
+#     for item in meal:
+#         if item != "spam":
+#             print(item, end=", ")
+#     print()
