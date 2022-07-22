@@ -1,7 +1,8 @@
-def is_palindrome(string): #method for singular word
+def is_palindrome(string):  # method for singular word
     return string[::-1].casefold() == string.casefold()
 
-def is_palindrome_sentence(sentence): #method for sentence, overcoming spaces and punctuation
+
+def is_palindrome_sentence(sentence):  # method for sentence, overcoming spaces and punctuation
     string = ""
     for char in sentence:
         if char.isalnum():
@@ -17,8 +18,6 @@ def diff_palindrome_sentence(sentence):
     for char in sentence:
         if char.isalnum():
             string += char.casefold()
-
-    print(string) # for debugging
 
     num_checks = int(len(string) / 2)
     # number of loops for it to compare the first indexed character with the last
@@ -40,12 +39,10 @@ def diff_palindrome_sentence(sentence):
 
 word = input("Please enter a word to check: ")
 
-
 if diff_palindrome_sentence(word):
     print("'{}' is a palindrome".format(word))
 else:
     print("'{}' is not a palindrome".format(word))
-
 
 
 # if is_palindrome(word):
@@ -57,6 +54,3 @@ else:
 #     print("'{}' is a palindrome".format(word))
 # else:
 #     print("'{}' is not a palindrome".format(word))
-
-
-
