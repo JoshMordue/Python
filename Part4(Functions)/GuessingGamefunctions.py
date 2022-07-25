@@ -1,5 +1,14 @@
 import random
 
+
+def get_integer(prompt):
+    while True:
+        temp = input(prompt)
+        if temp.isnumeric():
+            return int(temp)
+        else:
+            print("Please enter a number")
+
 highest = 10
 answer = random.randint(1, highest)
 guesses = 1
@@ -10,7 +19,7 @@ print(answer) #for testing purposes
 
 while guess != answer:
     print("Please guess a number between 1 to {0}: ".format(highest))
-    guess = int(input())
+    guess = get_integer(": ")
 
     if guess == 0:
         print("You gave up.")
