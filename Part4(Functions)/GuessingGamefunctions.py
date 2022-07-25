@@ -6,8 +6,7 @@ def get_integer(prompt):
         temp = input(prompt)
         if temp.isnumeric():
             return int(temp)
-        else:
-            print("Please enter a number")
+        print("Please enter a valid number")
 
 highest = 10
 answer = random.randint(1, highest)
