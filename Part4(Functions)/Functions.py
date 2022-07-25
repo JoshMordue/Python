@@ -16,3 +16,5 @@ for val in range(1, 5):
     print(two_times)
 
 
+answer = multiply(18, 3)
+print(answer)
