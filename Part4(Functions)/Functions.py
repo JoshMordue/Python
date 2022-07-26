@@ -48,7 +48,7 @@ def fibonacci(n):
     return result
 
 
-for i in range(36):
+for i in range(10):
     print(i, fibonacci(i))
 
 
