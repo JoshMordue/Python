@@ -18,12 +18,13 @@ def get_integer(prompt):
             return int(temp)
         print("Please enter a valid number")
 
+
 highest = 10
 answer = random.randint(1, highest)
 guesses = 1
 guess = 0
 
-print(answer) #for testing purposes
+print(answer)# for testing purposes
 
 
 while guess != answer:
