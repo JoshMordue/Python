@@ -7,8 +7,10 @@ def get_integer(prompt):
 
     The function will continue looping and prompting,
     the user until a valid 'int' is entered.
-    :param prompt:
-    :return: The entered prompt which is converted to an Int
+
+    :param prompt: The string that the user will see,
+        when they're prompted to enter the value.
+    :return: The Integer that the user enters.
     """
     while True:
         temp = input(prompt)
