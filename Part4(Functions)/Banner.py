@@ -1,8 +1,8 @@
 def banner_text(text):
-    screen_width = 80
+    screen_width = 50
     if len(text) > screen_width - 4:
-        print("EEK!!")
-        print("The text is too long to fit in the specified width")
+        raise ValueError("String {0} is larger than specified width {1}"
+                         .format(text, screen_width))
 
     if text == "*":
         print("*" * screen_width)
@@ -22,3 +22,5 @@ banner_text("Don't be silly chumps,")
 banner_text("Just purse your lips and whistle - that's the thing!")
 banner_text("And... always look on the bright side of life...")
 banner_text("*")
+
+
