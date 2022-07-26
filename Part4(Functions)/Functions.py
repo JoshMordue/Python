@@ -33,7 +33,7 @@ print(answer)
 
 
 def fibonacci(n):
-    """Return the 'n'th fibonacci number, for positive 'n'."""
+    """Return the 'n' th fibonacci number, for positive 'n'."""
     if 0 <= n <= 1:
         return n
 
