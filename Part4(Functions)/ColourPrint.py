@@ -1,3 +1,5 @@
+import colorama
+
 # Some ANSI escape sequences for colours and effects
 BLACK = '\u001b[30m'
 RED = '\u001b[31m'
@@ -14,7 +16,6 @@ UNDERLINE = '\u001b[4m'
 REVERSE = '\u001b[7m'
 
 
-
 def colour_print(text: str, effect: str) -> None:
     """
     Print 'text' using the ANSI sequences to change colour etc.
@@ -26,6 +27,8 @@ def colour_print(text: str, effect: str) -> None:
     output_string = "{0}{1}{2}".format(effect, text, RESET)
     print(output_string)
 
+
+colorama.init()
 colour_print("Hello, Red", RED)
 # test that the colour was reset
 print("This should be in the default terminal colour")
@@ -35,3 +38,4 @@ colour_print("Hello, Bold", BOLD)
 colour_print("Hello, Underline", UNDERLINE)
 colour_print("Hello, Reverse", REVERSE)
 colour_print("Hello, Black", BLACK)
+colorama.deinit()
