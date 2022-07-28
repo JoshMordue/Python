@@ -1,7 +1,15 @@
-def sum_numbers(*numbers: int) -> float:
+def sum_numbers(*numbers: float) -> float:
+    """Returns the value of all the variables passed through as a 'Float'"""
     result = 0
-    for x in numbers:
-        result += numbers
-    print(result)
+    for number in numbers:
+        result += number
+    return result
 
-sum_numbers(1, 2,3)
+
+#def sum_numbers(*numbers: float) -> float:
+#   """Returns the value of all the variables passed through as a 'Float'"""
+    #return sum(numbers)
+    #a simpler way of solving it using inbuilt functions
+
+print(sum_numbers(1, 2, 3))
+print(sum_numbers(12.5, 6.25, 11.778))
