@@ -41,7 +41,7 @@ def fibonacci(n):
     result = None
 
     for f in range(n - 1):
-        result = n_minus1 + n_minus2
+        result = n_minus2 + n_minus1
         n_minus2 = n_minus1
         n_minus1 = result
 
