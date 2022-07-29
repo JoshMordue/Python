@@ -8,3 +8,13 @@ vehicles = {
     'jimny': 'Suzuki Jimny 1.5',
     'fiesta': 'Ford Fiesta Ghia 1.4',
 }
+
+my_car = vehicles['fiesta']
+
+print(my_car)
+
+commuter = vehicles['virago']
+print(commuter)
+
+learner = vehicles.get("er5")
+print(learner)
