@@ -7,13 +7,16 @@ vehicles = {
     'tenere': 'Yamaha XT650',
     'jimny': 'Suzuki Jimny 1.5',
     'fiesta': 'Ford Fiesta Ghia 1.4',
+    'roadster': 'Triumph Street Triple', # replaces the original value
 }
-
 
 
 vehicles["starfighter"] = "Lockheed F-104"
 vehicles["learjet"] = "Bombadier Learjet 75"
 vehicles["Toy"] = "Glider"
+
+# upgrading the virago
+vehicles["virago"] = "Yamaha XV535"
 
 # for i in vehicles:
 #     print(i, vehicles[i],sep=", ")
