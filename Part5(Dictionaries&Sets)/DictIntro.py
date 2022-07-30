@@ -18,3 +18,7 @@ print(commuter)
 
 learner = vehicles.get("er5")
 print(learner)
+
+for i in vehicles:
+    print(i)
+    
