@@ -9,18 +9,15 @@ vehicles = {
     'fiesta': 'Ford Fiesta Ghia 1.4',
 }
 
-my_car = vehicles['fiesta']
 
-print(my_car)
 
-commuter = vehicles['virago']
-print(commuter)
-
-learner = vehicles.get("er5")
-print(learner)
+vehicles["starfighter"] = "Lockheed F-104"
+vehicles["learjet"] = "Bombadier Learjet 75"
+vehicles["Toy"] = "Glider"
 
 # for i in vehicles:
 #     print(i, vehicles[i],sep=", ")
 
 for key, value in vehicles.items():
     print(key, value, sep=", ")
+
