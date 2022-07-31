@@ -14,6 +14,7 @@ vehicles = {
 vehicles["starfighter"] = "Lockheed F-104"
 vehicles["learjet"] = "Bombadier Learjet 75"
 vehicles["Toy"] = "Glider"
+vehicles["Test"] = "Test"
 
 # upgrading the virago
 vehicles["virago"] = "Yamaha XV535"
