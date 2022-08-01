@@ -8,6 +8,7 @@ vehicles = {
     'jimny': 'Suzuki Jimny 1.5',
     'fiesta': 'Ford Fiesta Ghia 1.4',
     'roadster': 'Triumph Street Triple', # replaces the original value
+    'Test': 'Test'
 }
 
 
@@ -24,4 +25,5 @@ vehicles["virago"] = "Yamaha XV535"
 
 for key, value in vehicles.items():
     print(key, value, sep=", ")
+
 
