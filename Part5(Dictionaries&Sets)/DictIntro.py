@@ -8,15 +8,15 @@ vehicles = {
     'jimny': 'Suzuki Jimny 1.5',
     'fiesta': 'Ford Fiesta Ghia 1.4',
     'roadster': 'Triumph Street Triple', # replaces the original value
-    'Test': 'Test'
 }
 
 
 vehicles["starfighter"] = "Lockheed F-104"
 vehicles["learjet"] = "Bombadier Learjet 75"
 vehicles["Toy"] = "Glider"
-vehicles["Test"] = "Test"
 
+
+del vehicles["starfighter"]
 # upgrading the virago
 vehicles["virago"] = "Yamaha XV535"
 
