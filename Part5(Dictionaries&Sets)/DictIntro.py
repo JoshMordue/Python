@@ -17,6 +17,17 @@ vehicles["Toy"] = "Glider"
 
 
 del vehicles["starfighter"]
+
+result = vehicles.pop("f1", None)
+print(result)
+
+plane = vehicles.pop("learjet")
+print(plane)
+
+bike = vehicles.pop("tenere", "Not present")
+print(bike)
+print()
+
 # upgrading the virago
 vehicles["virago"] = "Yamaha XV535"
 
