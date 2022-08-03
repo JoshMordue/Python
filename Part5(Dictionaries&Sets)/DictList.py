@@ -22,11 +22,12 @@ while current_choice != '0':
             print("Removing {}".format(current_choice))
             #It's already in so remove it
             computer_parts.remove(chosen_part)
+            print(f"Your list now contains: {computer_parts}")
         else:
             print("Adding {}".format(current_choice))
             computer_parts.append(chosen_part)
             print("Your list now contains: {}".format(computer_parts))
-
+            available_parts.append(current_choice)
     else:
         print("Please add options from the list below:")
         for id, part in enumerate(available_parts):
