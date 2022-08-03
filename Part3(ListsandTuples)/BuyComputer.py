@@ -12,6 +12,7 @@ for i in range(1, len(available_parts) + 1):
     valid_choices.append(str(i))
 current_choice = "-"
 computer_parts = []
+available_parts.sort()
 
 while current_choice != '0':
     if current_choice in valid_choices:

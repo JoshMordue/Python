@@ -13,7 +13,9 @@ while current_choice != "0":
         chosen_part = available_parts[current_choice]
         print(f"Adding {chosen_part}")
     else:
-        print("Invalid entry please see below the valid options: ")
-    print(available_parts)
+        print("Please add options from the list")
+        for key, value in available_parts.items():
+            print(f"{key}: {value}")
+        print("0: to finish")
 
     current_choice = input("> ")
