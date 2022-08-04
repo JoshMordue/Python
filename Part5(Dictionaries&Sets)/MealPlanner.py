@@ -17,3 +17,7 @@ while True:
 
     if choice == "0":
         break
+
+    elif choice in display_dict:
+        selected_item = display_dict[choice]
+        print(f"You have selected {selected_item}")
