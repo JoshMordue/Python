@@ -3,7 +3,10 @@ from Contents import pantry, recipes
 
 def add_shopping_item(data: list, item: str, amount: int) -> None:
     """Add a tuple containing `item` and `amount` to the `data` list."""
-    data.append((item, amount))
+    for item in data:
+        if item in data:
+            data[item] += amount
+        data.append((item, amount))
 
 
 # display_dict = {str(index + 1): meal for index, meal in enumerate(recipes)}
@@ -39,5 +42,5 @@ while True:
                 print(f"\tYou need to buy {quantity_to_buy} of {food_item}")
                 add_shopping_item(shopping_list, food_item, quantity_to_buy)
 
-for items in shopping_list:
+for items in sorted(shopping_list):
     print(items)
