@@ -11,6 +11,7 @@ print(f"ketchup: {ketchup_quantity}")
 
 z_quantity = pantry.setdefault("zucchini", "eight")
 print(f"zucchini: {z_quantity}")
+
 print()
 print("'pantry' now contains...")
 
