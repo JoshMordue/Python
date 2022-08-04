@@ -21,3 +21,6 @@ while True:
     elif choice in display_dict:
         selected_item = display_dict[choice]
         print(f"You have selected {selected_item}")
+        print("Checking ingredients ...")
+        ingredients = recipes[selected_item]
+        print(ingredients)
