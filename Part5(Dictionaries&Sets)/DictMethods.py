@@ -13,6 +13,11 @@ d = {
 
 pantry_items = ['chicken', 'spam', 'egg', 'bread', 'lemon']
 
-new_dict = dict.fromkeys(pantry_items, 1)
+keys = d.keys()
+print(keys)
 
-print(new_dict)
+# new_dict = dict.fromkeys(pantry_items, 1)
+# print(new_dict)
+
+for item in d.keys():
+    print(item)
