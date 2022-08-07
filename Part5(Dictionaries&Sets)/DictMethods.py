@@ -13,11 +13,29 @@ d = {
 
 pantry_items = ['chicken', 'spam', 'egg', 'bread', 'lemon']
 
-keys = d.keys()
-print(keys)
+d2 = {
+    7:  "lucky seven",
+    10: "ten",
+    3:  "this is the new three",
+}
 
-# new_dict = dict.fromkeys(pantry_items, 1)
+d.update(d2)
+for key, value in d.items():
+    print(key, value)
+
+print()
+
+d.update(enumerate(pantry_items))
+for key, value in d.items():
+    print(key, value)
+
+# Code for "The remaining `dict` methods" lecture.
+# ************************************************
+# new_dict = dict.fromkeys(pantry_items, 0)
 # print(new_dict)
-
-for item in d.keys():
-    print(item)
+#
+# keys = d.keys()
+# print(keys)
+#
+# for item in d.keys():
+#     print(item)
