@@ -9,6 +9,7 @@ d = {
     7: "seven",
     8: "eight",
     9: "nine",
+    11: "eleven",
 }
 
 pantry_items = ['chicken', 'spam', 'egg', 'bread', 'lemon']
