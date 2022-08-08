@@ -23,6 +23,14 @@ print(v)
 print("four" in v)
 print("eleven" in v)
 
+keys = list(d.keys())
+values = list(v) # => list(d.values())
+
+if "four" in values:
+    index = values.index("four")
+    key = keys[index]
+    print(f"{d[key]} was found with key {key}")
+
 # d2 = {
 #     7:  "lucky seven",
 #     10: "ten",
