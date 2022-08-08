@@ -1,14 +1,24 @@
-from RecipeOptions import recipe
+from Contents import recipes
+
 
 def my_deepcopy(d: dict) -> dict:
-    end_copy = {}
+    """Copy a dictionary, creating copies of the `list` or `dict` values.
 
-    for entry in d:
-        end_copy.update(d)
-    return recipes_copy
+    The function will crash with an AttributeError if the values aren't
+    lists or dictionaries.
+
+    :param d: The dictionary to copy.
+    :return: A copy of `d`, with the values being copies of the original values.
+    """
+    new_dict = {}
+    for key, value in d.items():
+        new_value = value.copy()
+        new_dict[key] = new_value
+
+    return new_dict
 
 
-recipes_copy = my_deepcopy(recipe)
-recipes_copy["butter chicken"]["ginger"] = 300
-print(recipes_copy["butter chicken"]["ginger"])
-print(recipe["butter chicken"]["ginger"])
+recipes_copy = my_deepcopy(recipes)
+recipes_copy["Butter chicken"]["ginger"] = 300
+print(recipes_copy["Butter chicken"]["ginger"])
+print(recipes["Butter chicken"]["ginger"])
