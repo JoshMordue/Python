@@ -9,6 +9,7 @@ d = {
     7: "seven",
     8: "eight",
     9: "nine",
+    "IV": "four",
 }
 
 pantry_items = ['chicken', 'spam', 'egg', 'bread', 'lemon']
@@ -30,6 +31,12 @@ if "four" in values:
     index = values.index("four")
     key = keys[index]
     print(f"{d[key]} was found with key {key}")
+
+print()
+
+for key, value in d.items():
+    if value == "four":
+         print(f"{d[key]} was found with key {key}")
 
 # d2 = {
 #     7:  "lucky seven",
