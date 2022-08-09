@@ -17,6 +17,14 @@ def simple_hash(s: str) -> int:
     return basic_hash % 10
 
 
+def get(k: str) -> str or None:
+    """Return the value for a key, or None if the key doesn't exist"""
+    hash_code = simple_hash(k)
+    if values[hash_code]:
+        return values[hash_code]
+    return None
+
+
 keys = [""] * 10
 values = keys.copy()
 
@@ -29,3 +37,6 @@ for key, value in data:
 
 print(keys)
 print(values)
+
+value = get("banana")
+print(value)
