@@ -17,7 +17,15 @@ def simple_hash(s: str) -> int:
     return basic_hash % 10
 
 
+keys = [""] * 10
+values = keys.copy()
+
 for key, value in data:
-    # h = simple_hash(key)
-    h = hash(key)
+    h = simple_hash(key)
+    # h = hash(key)
     print(key, h)
+    keys[h] = key
+    values[h] = value
+
+print(keys)
+print(values)
