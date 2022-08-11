@@ -27,4 +27,3 @@ if new_hash.hexdigest() != original_hash.hexdigest():
     print("The code has been modified.")
 else:
     print("The code has not been changes")
-    
