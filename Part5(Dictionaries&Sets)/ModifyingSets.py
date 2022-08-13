@@ -4,8 +4,15 @@ print(numbers, type(numbers))
 
 # numbers.add(1)
 # print(numbers)
+#
+# while len(numbers) < 4:
+#     next_value = int(input("Please enter your next value: "))
+#     numbers.add(next_value)
+# print(numbers)
 
-while len(numbers) < 4:
-    next_value = int(input("Please enter your next value: "))
-    numbers.add(next_value)
-print(numbers)
+data = ["blue", "red", "blue", "green", "red", "blue", "white"]
+
+# create a set from the list to remove the duplicates
+
+unique_data = set(data)
+print(unique_data)
