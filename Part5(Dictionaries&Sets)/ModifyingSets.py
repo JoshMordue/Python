@@ -21,3 +21,6 @@ print(unique_data)
 
 unique_data = list(dict.fromkeys(data))
 print(unique_data)
+
+print()
+print(dict.fromkeys(data))
