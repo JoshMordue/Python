@@ -10,5 +10,13 @@ animals_list = ['cow', 'sheep', 'hen', 'goat', 'horse']
 goat = animals_list[3]
 print(goat)
 
-print("Indexing a set is not possible")
-goat = farm_animals[3]
+print()
+# print("Indexing a set is not possible")
+# goat = farm_animals[3]
+
+more_animals = {'sheep', 'goat', 'cow', 'horse', 'hen'}
+
+if more_animals == more_animals:
+    print('The sets are equal')
+else:
+    print("The sets are different")
