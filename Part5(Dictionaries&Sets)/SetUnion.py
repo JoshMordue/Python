@@ -1,11 +1,21 @@
-farm_animals = {"Sheep", "Hen", "Cow", "Horse", "Goat"}
-wild_animals = {"Lion", "Elephant", "Tiger", "Goat", "Panther", "Horse"}
+# farm_animals = {"Sheep", "Hen", "Cow", "Horse", "Goat"}
+# wild_animals = {"Lion", "Elephant", "Tiger", "Goat", "Panther", "Horse"}
+#
+# all_animals_1 = farm_animals.union(wild_animals)
+# print(all_animals_1)
+#
+# all_animals_2 = wild_animals.union(farm_animals)
+# print(all_animals_2)
+#
+# all_animals_3 = wild_animals | farm_animals
+# print(all_animals_3)
 
-all_animals_1 = farm_animals.union(wild_animals)
-print(all_animals_1)
+from PrescriptionData import adverse_interactions
 
-all_animals_2 = wild_animals.union(farm_animals)
-print(all_animals_2)
+meds_to_watch = set()
 
-all_animals_3 = wild_animals | farm_animals
-print(all_animals_3)
+for interaction in adverse_interactions:
+    # meds_to_watch = meds_to_watch.union(interaction)
+    meds_to_watch = meds_to_watch | interaction
+
+print(sorted(meds_to_watch))
