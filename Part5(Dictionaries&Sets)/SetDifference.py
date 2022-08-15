@@ -12,9 +12,7 @@ print(primes)
 squares = set(squares_generator(100))
 print(squares)
 
-print(odds.intersection(squares))
-print(evens & squares)
+print(odds.difference(primes))
+print(odds - primes)
 
-# pass an iterable to the method
-even_squares = evens.intersection(squares_generator(100))
-print(even_squares)
+print(primes - odds)
