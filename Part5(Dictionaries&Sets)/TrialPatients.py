@@ -10,3 +10,6 @@ potential_rides = {"Donkey", "Horse", "Camel"}
 
 intersection = farm_animals & wild_animals & potential_rides
 print(intersection)
+
+mounts = farm_animals.intersection(wild_animals, potential_rides)
+print(mounts)
