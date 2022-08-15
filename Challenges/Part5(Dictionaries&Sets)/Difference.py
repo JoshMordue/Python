@@ -17,3 +17,5 @@ basket = {'garlic crusher',
           }
 
 # Add your code here.
+suggestions = sorted(set(favourites.difference(basket)))
+print(suggestions)
