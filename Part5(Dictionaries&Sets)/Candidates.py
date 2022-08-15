@@ -10,9 +10,11 @@ candidates = {
 }
 
 interviewees = set()
+required_skills = set(required_skills)
 
 for candidate, skills in candidates.items():
-    if skills.issuperset(required_skills):
+    # if skills.issuperset(required_skills):
+    if skills > required_skills:
         interviewees.add(candidate)
 
 print(interviewees)
