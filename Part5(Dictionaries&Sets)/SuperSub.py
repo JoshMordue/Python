@@ -15,3 +15,9 @@ garden_birds = {'Swallow', 'Wren', 'Robin'}
 print(garden_birds == birds)
 print(garden_birds <= birds)
 print(garden_birds < birds)
+
+print("*" * 70)
+
+more_birds = {'Wren', 'Budgie', 'Swallow'}
+
+print(garden_birds >= more_birds)
