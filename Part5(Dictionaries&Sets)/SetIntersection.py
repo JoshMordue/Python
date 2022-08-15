@@ -14,3 +14,7 @@ print(squares)
 
 print(odds.intersection(squares))
 print(evens & squares)
+
+# pass an iterable to the method
+even_squares = evens.intersection(squares_generator(100))
+print(even_squares)
