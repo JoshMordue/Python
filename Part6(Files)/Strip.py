@@ -6,5 +6,11 @@ with open(filename) as poem:
 print(first)
 chars = "'Twasebv"
 
-no_apostrophe = first.strip(chars)
-print(no_apostrophe)
+# no_apostrophe = first.strip(chars)
+# print(no_apostrophe)
+
+for character in first:
+    for character in chars:
+        print(f'removing ' f"{character}"'')
+    else:
+        break
