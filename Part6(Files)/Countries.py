@@ -20,10 +20,14 @@ with open(input_filename) as country_file:
         # print(country_dict)
         countries[country.casefold()] = country_dict
 
-chosen_country = input('Please enter the name of a country: ').casefold()
-if chosen_country in countries:
-    country_data = countries[chosen_country]
-    print(country_data['capital'])
-
+while True:
+    chosen_country = input('Please enter the name of a country: ')
+    country_key = chosen_country.casefold()
+    if country_key in countries:
+        country_data = countries[country_key]
+        print(country_data['capital'])
+        print(f"The capital of {chosen_country} is {country_data['capital']}")
+    elif chosen_country == 'quit':
+        break
 
 
