@@ -1,3 +1,16 @@
+def removeprefix(string: str, prefix: str) -> str:
+    if string.startswith(prefix):
+        return  string[len(prefix)]
+    else:
+        return string[:]
+
+
+def removesuffix(string: str, suffix: str) -> str:
+    if suffix and string.endswith(suffix): # suffix= '' should not call string[:-1]
+        return string[:-len(suffix)]
+    else:
+        return string[:]
+
 filename = 'Jabberwocky.txt'
 with open(filename) as poem:
     first = poem.readline().rstrip()
