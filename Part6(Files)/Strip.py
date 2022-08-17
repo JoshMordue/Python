@@ -1,6 +1,6 @@
 def removeprefix(string: str, prefix: str) -> str:
     if string.startswith(prefix):
-        return  string[len(prefix)]
+        return string[len(prefix):]
     else:
         return string[:]
 
@@ -10,6 +10,7 @@ def removesuffix(string: str, suffix: str) -> str:
         return string[:-len(suffix)]
     else:
         return string[:]
+
 
 filename = 'Jabberwocky.txt'
 with open(filename) as poem:
@@ -30,7 +31,8 @@ for character in first:
 
 print("*" * 80)
 
-twas_removed = first.removeprefix("'Twas")
+twas_removed = removeprefix(first, "'Twas")
 print(twas_removed)
-toves_removed = first.removesuffix('toves')
+
+toves_removed = removesuffix(first, 'toves')
 print(toves_removed)
