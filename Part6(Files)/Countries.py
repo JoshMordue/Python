@@ -19,7 +19,11 @@ with open(input_filename) as country_file:
         }
         # print(country_dict)
         countries[country.casefold()] = country_dict
-        print(countries['country'])
+
+chosen_country = input('Please enter the name of a country: ').casefold()
+if chosen_country in countries:
+    country_data = countries[chosen_country]
+    print(country_data['capital'])
 
 
 
