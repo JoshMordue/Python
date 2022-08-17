@@ -22,15 +22,19 @@ with open(input_filename) as country_file:
         countries[code.casefold()] = country_dict
 
 
-countries_no_capitals = set()
+countries_no_capitals = []
 
 print(f"The following countries do not have an Capital city :")
 
 for entries in countries.values():
     if entries['capital'] == '':
-        countries_no_capitals.add(entries['name'])
+        countries_no_capitals.append(entries['name'])
 
-print(countries_no_capitals, sep='\n\t')
+no_capitals = (sorted(set(countries_no_capitals)))
+
+for i in range(len(no_capitals)):
+    print(f"{no_capitals[i]}"
+    )
 
 
 while True:
@@ -42,3 +46,15 @@ while True:
         print(f"The capital of {chosen_country} is {country_data['capital']}")
     elif chosen_country == 'quit':
         break
+
+
+#
+# countries_no_capitals = set()
+#
+# print(f"The following countries do not have an Capital city :")
+#
+# for entries in countries.values():
+#     if entries['capital'] == '':
+#         countries_no_capitals.add(entries['name'])
+#
+# print(countries_no_capitals, sep='\n\t')
