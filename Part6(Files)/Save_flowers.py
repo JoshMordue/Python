@@ -9,7 +9,7 @@ data = [
     "Iris - Flower",
     "Japanese Camellia - Shrub",
     "Lavender - Shrub",
-    "Lilac- Shrub",
+    "Lilac - Shrub",
     "Magnolia - Shrub",
     "Peony - Shrub",
     "Queen Anne's Lace - Flower",
@@ -25,4 +25,4 @@ plants_filename = "flowers_print.txt"
 
 with open(plants_filename, 'w') as plants:
     for plant in data:
-        
+        print(plant, file=plants)
