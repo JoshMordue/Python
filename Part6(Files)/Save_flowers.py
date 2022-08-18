@@ -20,17 +20,23 @@ data = [
     "Witch Hazel - Shrub",
 ]
 
+#
+# plants_filename = "flowers_print.txt"
+#
+# with open(plants_filename, 'w') as plants:
+#     for plant in data:
+#         print(plant, file=plants)
+#
+# new_list = []
+#
+# with open(plants_filename) as plants:
+#     for plant in plants:
+#         new_list.append(plant.rstrip())
+#
+# print(new_list)
 
-plants_filename = "flowers_print.txt"
+plants_filename = 'flowers_write.txt'
 
-with open(plants_filename, 'w') as plants:
+with open(plants_filename, "w") as plants:
     for plant in data:
-        print(plant, file=plants)
-
-new_list = []
-
-with open(plants_filename) as plants:
-    for plant in plants:
-        new_list.append(plant.rstrip())
-
-print(new_list)
+        plants.write(plant)
