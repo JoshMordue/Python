@@ -36,6 +36,7 @@ for i in range(len(no_capitals)):
     print(f"{no_capitals[i]}"
     )
 
+print()
 
 while True:
     chosen_country = input('Please enter the name of a country: ')
