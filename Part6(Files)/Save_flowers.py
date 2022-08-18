@@ -35,10 +35,19 @@ data = [
 #
 # print(new_list)
 
-plants_filename = 'flowers_write.txt'
+# plants_filename = 'flowers_write.txt'
+#
+# with open(plants_filename, "w") as plants:
+#     for plant in data:
+#         plants.write(plant)
+#
+# print(data)
+# string_representation = data.__str__()
+# print(type(string_representation))
 
-with open(plants_filename, "w") as plants:
-    for plant in data:
-        plants.write(plant)
+filename = "test_numbers.txt"
 
-print(data)
+with open(filename, "w") as test:
+    for i in range(10):
+        print(i, file=test)
+
