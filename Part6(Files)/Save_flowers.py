@@ -53,4 +53,4 @@ with open(filename, "w") as test:
 
 with open(filename, "w") as test:
     for i in range(10):
-        test.write(str(i))
+        test.write(str(i) + "\n")
