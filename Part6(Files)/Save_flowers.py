@@ -51,3 +51,6 @@ with open(filename, "w") as test:
     for i in range(10):
         print(i, file=test)
 
+with open(filename, "w") as test:
+    for i in range(10):
+        test.write(str(i))
