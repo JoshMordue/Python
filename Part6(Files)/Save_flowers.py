@@ -55,3 +55,9 @@ with open(filename, "w") as test:
     for i in range(10):
         test.write(str(i) + "\n")
         print("This is a test")
+
+with open('Thiswillbeatest.txt', "w") as test:
+    for i in range(10):
+        test.write(str(i) + "\n")
+        print("This is a test")
+
