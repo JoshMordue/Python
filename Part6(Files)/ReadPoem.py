@@ -26,20 +26,19 @@
 # for character in reversed(text):
 #     print(character, end='')
 
-with open('Jabberwocky.txt') as jabber:
+# with open('Jabberwocky.txt') as jabber:
+#
+#     while True:
+#         line = jabber.readline().rstrip()
+#         print(line)
+#         if 'jubjub' in line.casefold():
+#             break
+#
+# print("*" * 70)
 
-    while True:
-        line = jabber.readline().rstrip()
-        print(line)
-        if 'jubjub' in line.casefold():
-            break
-
-print("*" * 70)
-
-with open('Jabberwocky.txt') as jabber:
+with open('Jabberwocky.txt', encoding='utf-8') as jabber:
     for line in jabber:
         print(line.rstrip())
-        if 'jubjub' in line.casefold():
-            break
+
 
             
