@@ -20,4 +20,4 @@ with open('test.json', 'r', encoding='utf-8') as testfile:
     data = json.load(testfile)
 
 print(data)
-print(data(2))
+# print(data(2))
