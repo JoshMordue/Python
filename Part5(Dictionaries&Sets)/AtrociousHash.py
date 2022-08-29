@@ -3,7 +3,7 @@ data = [
     ("apple", "good for making cider"),
     ("lemon", "a sour, yellow citrus fruit"),
     ("grape", "a small, sweet fruit growing in bunches"),
-    ("melon", "sweet and juicy"),
+    ("melon", "is sweet and juicy"),
 ]
 
 # print(ord("a"))
