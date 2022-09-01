@@ -12,3 +12,15 @@ with open(input_filename, encoding='utf-8', newline='') as countries_data:
     for row in country_reader:
         print(row)
 
+print('*' * 80)
+attributes = ['delimiter',
+              'doublequote',
+              'escapechar',
+              'lineterminator',
+              'quotechar',
+              'quoting',
+              'skipinitialspace',
+              ]
+
+for attributes in attributes:
+    print(f'{attributes}: {getattr(country_dialect, attributes)}')
