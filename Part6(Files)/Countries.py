@@ -48,8 +48,6 @@ while True:
     elif chosen_country == 'quit':
         break
 
-
-#
 # countries_no_capitals = set()
 #
 # print(f"The following countries do not have an Capital city :")
