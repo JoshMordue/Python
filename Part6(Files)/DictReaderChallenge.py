@@ -2,6 +2,10 @@ import csv
 
 input_filename = 'country_info.txt'
 
+dialect = csv.excel
+dialect.delimiter = '|'
+
+
 countries = {}
 with open(input_filename, encoding='utf-8', newline='') as country_file:
     dict_reader = csv.DictReader(country_file, delimiter='|')
