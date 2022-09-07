@@ -7,3 +7,8 @@ albums = [("Welcome to my Nightmare", "Alice Cooper", 1975),
 
 keys = ['album', 'artist', 'year']
 
+for row in albums:
+    zip_object = keys, row
+    print(zip_object)
+    for thing in zip(keys, row):
+        print("\t", thing)
