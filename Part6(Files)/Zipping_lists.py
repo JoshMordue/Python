@@ -5,7 +5,7 @@ albums = [("Welcome to my Nightmare", "Alice Cooper", 1975),
           ("Ride the Lightning", "Metallica", 1984),
           ]
 
-keys = ['album', 'artist', 'year']
+keys = ['album', 'artist', 'year', 'Test']
 
 for row in albums:
     zip_object = zip(keys, row)
