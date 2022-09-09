@@ -56,4 +56,4 @@ while True:
 #     if entries['capital'] == '':
 #         countries_no_capitals.add(entries['name'])
 #
-# print(countries_no_capitals, sep='\n\t')
+print(countries_no_capitals, sep='\n\t')
