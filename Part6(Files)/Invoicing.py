@@ -19,7 +19,8 @@ def parse_invoice_number(invoice_number: str) -> tuple[int, int]:
         the 4 digit year as an integer,
         the invoice number as an integer.
     """
-    
+    year, number = invoice_number.split('-')
+    return int(year), int(number)
 
 
 def next_invoice_number(invoice_number: str) -> str:
