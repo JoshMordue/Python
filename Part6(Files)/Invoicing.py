@@ -35,6 +35,16 @@ def next_invoice_number(invoice_number: str) -> str:
         the new invoice number will contain the current year, and the
         numerical part will be set to "0001".
     """
+    invoice_year, number = parse_invoice_number(invoice_number)
+    year = get_year()
+    if year == invoice_year:
+        number += 1
+    else:
+        invoice_year = year
+        number = 1
+    new_invoice_number = f'{invoice_year}-{number:04d}'
+    return new_invoice_number
+
 
 
 def record_invoice(invoice_file: TextIO,
