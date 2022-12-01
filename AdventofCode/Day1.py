@@ -15,7 +15,7 @@ with open('input.txt', 'r') as elf_list:
                 top_three.append(record_amount)
             total = 0
 
+elf_list.close()
+
 print(record_amount)
 print(sum(top_three[-3:]))
-
-elf_list.close()
