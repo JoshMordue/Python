@@ -5,5 +5,5 @@ Elfs = {'First Elf': sum([1000, 2000, 3000]),
         'Fifth Elf': sum([10000]),
         }
 
-print(max(Elfs.items(), key=lambda i: i[1]))
+print("The Elf with the most calories is the " + (max(Elfs.keys(), key=lambda i: i[1])))
 
