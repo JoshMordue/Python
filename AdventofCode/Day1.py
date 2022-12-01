@@ -13,9 +13,7 @@ with open('input.txt', 'r') as elf_list:
             if total > record_amount:
                 record_amount = total
                 top_three.append(record_amount)
-                total = 0
-            else:
-                total = 0
+            total = 0
 
 print(record_amount)
 print(sum(top_three[-3:]))
