@@ -1,7 +1,6 @@
 total = 0
-record = 0
-position = 0
 record_amount = 0
+top_three = []
 
 
 with open('input.txt', 'r') as elf_list:
@@ -11,15 +10,14 @@ with open('input.txt', 'r') as elf_list:
             total += int(line)
 
         else:
-            if total > record:
-                record = position
+            if total > record_amount:
                 record_amount = total
-            total = 0
-            position += 1
+                top_three.append(record_amount)
+                total = 0
+            else:
+                total = 0
 
-    print(total)
-    print(record)
-    print(position)
-
+print(record_amount)
+print(sum(top_three[-3:]))
 
 elf_list.close()
