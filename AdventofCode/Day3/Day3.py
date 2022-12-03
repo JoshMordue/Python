@@ -1,56 +1,43 @@
 import string
 lower_values = string.ascii_lowercase
 upper_values = string.ascii_uppercase
+string_compare = ''
 answer = 0
-combined = []
-compare1 = []
-compare2 = []
-iter = 1
-check_iter = 0
 
 with open('input.txt', 'r') as input_text:
-    for line in input_text:
-        combined.append(line.strip('\n'))
+    rucksacks = input_text.read().strip().split()
     input_text.close()
 
-for entry in combined:
-    compare1.append(combined[iter])
-    combined.pop(iter)
-    iter += 1
-    compare2.append(combined[iter])
-    combined.pop(iter)
-    iter += 1
 
-    common_chars = set(combined[check_iter]) & set(compare1[check_iter]) & set(compare2[iter]
+for i in range(0, len(rucksacks), 3):
+    compare1, compare2, compare3 = rucksacks[i:i+3]
+    common_chars = set(compare1) & set(compare2) & set(compare3)
+
+    print(common_chars)
+    string_compare = repr(common_chars).strip("{'}")
 
     for index, letter in enumerate(lower_values):
-        if compare in letter:
+        if string_compare in letter:
             answer += index + 1
             print(answer)
 
     for index, letter in enumerate(upper_values):
-        if compare in letter:
+        if string_compare in letter:
             answer += index + 27
             print(answer)
 
+print(answer)
 
-
-
-
-
-
-
-print(combined)
-
-
-
-
-
-
-
-
-
-
+#task 1
+# for index, letter in enumerate(lower_values):
+#     if compare in letter:
+#          answer += index + 1
+#          print(answer)
+#
+# for index, letter in enumerate(upper_values):
+#     if compare in letter:
+#         answer += index + 27
+#         print(answer)
 
 
 # import string
