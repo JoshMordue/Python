@@ -31,27 +31,28 @@ print(first_range2)
 total = 0
 check = 0
 for entry in first_range:
-    r = np.arange(start=int(first_range1) stop=int(first_range2))
+    r = np.arange(start=int(first_range1), stop=int(first_range2))
     c = np.arange(start=int(second_range1), stop=int(second_range2))
 
 
     print(r)
     print(c)
+
     for number in r:
         exists = number in c
-
         if exists:
             check += 1
             if check == len(r):
                 total += 1
 
+for entry in second_range:
     for number in c:
-        exists = c in r
+        exists = number in r
 
         if exists:
             check += 1
             if check == len(c):
-                total += 1
+                  total += 1
 
 
 
