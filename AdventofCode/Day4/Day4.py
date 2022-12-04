@@ -1,59 +1,22 @@
-import numpy as np
+import re
 
-first_range = []
-second_range = []
+filename = 'input.txt'
 
-with open('input.txt', 'r') as input_text:
-    total_range = input_text.read().strip().split()
-    input_text.close()
+with open(filename) as f:
+    lines = [list(map(int, re.split('-|,', line.rstrip()))) for line in f]
 
-total_range = '.'.join(str(x) for x in total_range)
+overlap_count_1 = 0
+overlap_count_2 = 0
 
-index = ''
-for letter in total_range:
-    if letter == ',':
-        first_range.append(index)
-        index = ''
-        continue
-    elif letter == '.':
-        second_range.append(index)
-        index = ''
-    else:
-        index += letter
+for this_pair in lines:
+    elf_1 = set([n for n in range(this_pair[0], this_pair[1] + 1)])
+    elf_2 = set([n for n in range(this_pair[2], this_pair[3] + 1)])
 
-for entry in first_range:
-    first_range1, first_range2 = entry.split('-')
-    second_range1, second_range2 = entry.split('-')
+    if elf_1.issubset(elf_2) or elf_2.issubset(elf_1):
+        overlap_count_1 += 1
 
-print(first_range1)
-print(first_range2)
+    if not elf_1.isdisjoint(elf_2):
+        overlap_count_2 += 1
 
-total = 0
-check = 0
-for entry in first_range:
-    r = np.arange(start=int(first_range1), stop=int(first_range2))
-    c = np.arange(start=int(second_range1), stop=int(second_range2))
-
-
-    print(r)
-    print(c)
-
-    for number in r:
-        exists = number in c
-        if exists:
-            check += 1
-            if check == len(r):
-                total += 1
-
-for entry in second_range:
-    for number in c:
-        exists = number in r
-
-        if exists:
-            check += 1
-            if check == len(c):
-                  total += 1
-
-
-
-print(total)
+print("Part 1:", overlap_count_1)
+print("Part 2:", overlap_count_2)
