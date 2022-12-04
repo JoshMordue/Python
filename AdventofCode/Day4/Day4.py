@@ -1,16 +1,13 @@
 import re
 
-filename = 'input.txt'
 
-with open(filename) as f:
+with open('input.txt', 'r') as f:
     lines = [list(map(int, re.split('-|,', line.rstrip()))) for line in f]
-
 
 overlap_count_1 = 0
 overlap_count_2 = 0
 
 for this_pair in lines:
-    print(this_pair)
     elf_1 = set([n for n in range(this_pair[0], this_pair[1] + 1)])
     elf_2 = set([n for n in range(this_pair[2], this_pair[3] + 1)])
 
