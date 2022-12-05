@@ -1,13 +1,21 @@
-with open('input.txt', 'r') as instructions:
+with open('input.txt', 'rt') as instructions:
     crates, ins = instructions.read().split("\n\n")
 
-stack = crates[1::4]
-i = 1
-for line in stack:
-    stack_i = []
-    stack_i = line[[::-1]::9]
-    i += 1
-    print(stack_i)
+stack_width = 4
+p = re.compile(r"[A-Z]")
+# reverse it, so we've got the stack numbers at the top
+stack_data = stack_data[::-1]
+num_stacks = len(stack_data[0].split())
+
+
+
+movements = crates(ins.splitlines())
+
+print(stacks)
+print(movements)
+
+
+
 
 
 
