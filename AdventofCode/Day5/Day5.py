@@ -1,23 +1,36 @@
-"""need to revisit and learn from this"""
+f = open('input.txt', 'r')
+content = f.readlines()
+num_stacks = int(len(content[0]) / 4)
+stacks = [[] for i in range(num_stacks)]
+end_result = []
 
-with open("input.txt") as f:
-    lines = f.readlines()
-
-idx = 0
-for i, l in enumerate(lines):
-    if len(l) == 1:
-        idx = i
+for line in content:
+    if line[1] == '1':
         break
+    for stack in range(num_stacks):
+        box_index = 4 * stack + 1
+        if line[box_index] == ' ':
+            continue
+        stacks[stack].append(line[box_index])
 
-crates = list(zip(*[list(l[1::4]) for l in lines[i-2::-1]]))
-crates = [[k for k in c if k != ' '] for c in crates]
+class stack:
+    boxes = []
+    def __init__(self):
+        self.boxes = stacks
+    def move(self, amount, starting_stack, ending_stack):
+        movers = self.boxes[starting_stack-1][:amount][::-1]
+        self.boxes[starting_stack-1] = self.boxes[starting_stack-1][amount:]
+        self.boxes[ending_stack - 1] = movers + self.boxes[ending_stack - 1]
+    def print_top_cargo(self):
+        for stack in self.boxes:
+            print(stack[0], end='')
 
-moves = [l.split(" from ") for l in lines[idx+1:]]
-for a, b in moves:
-    idx_s, idx_t = [int(k)-1 for k in b.split(" to ")]
-    s, t = crates[idx_s], crates[idx_t]
-    r = [s.pop() for _ in range(int(a[5:]))]
-    #t.extend(r)      # Part 1
-    t.extend(r[::-1]) # Part 2
+# Initialize cargo object and call move function based on each command
+cargo = stack()
+for line in content:
+    if line[0] == 'm':
+        parts = line.split(' ')
+        parts[5] = parts[5][0]
+        cargo.move(int(parts[1]), int(parts[3]), int(parts[5]))
 
-print("".join(c[-1] for c in crates))
+cargo.print_top_cargo()
