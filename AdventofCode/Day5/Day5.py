@@ -1,4 +1,4 @@
-"""need to revisit"""
+"""need to revisit and learn from this"""
 
 with open("input.txt") as f:
     lines = f.readlines()
